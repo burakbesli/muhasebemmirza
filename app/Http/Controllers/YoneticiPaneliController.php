@@ -21,7 +21,7 @@ class YoneticiPaneliController extends Controller
      */
     public function index()
     {
-        dd($_SERVER);
+       return view('yoneticipaneli.index');
     }
 
     /**

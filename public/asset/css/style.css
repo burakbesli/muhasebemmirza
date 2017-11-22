@@ -20,7 +20,7 @@ a:hover, a:focus, a:active {
   text-decoration: none; }
 
 .nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
-  background-color: #7376df; }
+  background-color: #f0ad4e; }
 
 h1 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -120,7 +120,7 @@ p {
   background-image: none; }
 
 .nav-pills .nav-link.active, .badge-primary[href]:focus, .badge-primary[href]:hover, a.bg-primary:focus, a.bg-primary:hover {
-  background-color: #6365d2 !important; }
+  background-color: #444444 !important; }
 
 .form-control:focus {
   border-color: #7376df !important; }
@@ -221,7 +221,7 @@ p {
   color: #444444; }
 
 .dropdown a:hover, .dropdown a:active, .dropdown a:focus {
-  background-color: #7376df;
+  background-color: #f0ad4e;
   color: #fff; }
 
 .sidebar {
@@ -237,7 +237,7 @@ p {
   overflow-y: auto;
   /* Scrollable contents if viewport is shorter than content. */
   border-right: 1px solid #eee;
-  background: #7376df; }
+  background: #0275d8; }
   .sidebar a {
     color: #fff;
     text-transform: uppercase;
@@ -288,7 +288,7 @@ p {
   right: 1rem; }
 
 .sidebar a:focus, .sidebar a:visited, .sidebar a:hover, .sidebar a:active {
-  background-color: #6365d2 !important; }
+  background-color: #f0ad4e !important; }
 
 @media screen and (max-width: 576px) {
   #wrapper .sidebar-nav {
