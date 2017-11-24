@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class GenelAyarlar extends Migration
+class Gider extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class GenelAyarlar extends Migration
      */
     public function up()
     {
-        Schema::create('genel_ayarlar', function (Blueprint $table) {
+        Schema::create('gider', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('gider_adi', 191);
+            $table->string('gider_tutari', 191);
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class GenelAyarlar extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('genel_ayarlar');
+        Schema::dropIfExists('gider');
     }
 }

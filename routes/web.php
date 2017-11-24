@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/yoneticipaneli', 'YoneticiPaneliController@index')->name('yoneticipaneli');
+Route::resource('gelir', 'GelirController');
+Route::resource('gider', 'GiderController');
+Route::resource('raporlar', 'RaporController');
