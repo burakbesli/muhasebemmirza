@@ -11,13 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+    Route::get('/', function () {
+        return view('login.index');
+    });
+
+
+
+
 
 Auth::routes();
 
-Route::get('/yoneticipaneli', 'YoneticiPaneliController@index')->name('yoneticipaneli');
+Route::get('/home', 'YoneticiPaneliController@index')->name('yoneticipaneli');
 Route::resource('gelir', 'GelirController');
 Route::resource('gider', 'GiderController');
 Route::resource('raporlar', 'RaporController');

@@ -8,7 +8,7 @@
             <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><em class="fa fa-bars"></em></a>
 
             <ul class="nav nav-pills flex-column sidebar-nav">
-                <li class="nav-item"><a class="nav-link {{ Request::path() == 'yoneticipaneli' ? 'active' : '' }}" href="{{route('yoneticipaneli')}}"><em class="fa fa-dashboard"></em> YÖNETİCİ PANELİ <span class="sr-only">(current)</span></a></li>
+                <li class="nav-item"><a class="nav-link {{ Request::path() == 'home' ? 'active' : '' }}" href="{{route('yoneticipaneli')}}"><em class="fa fa-dashboard"></em> YÖNETİCİ PANELİ <span class="sr-only">(current)</span></a></li>
                 <li class="nav-item"><a class="nav-link {{ Request::path() == 'gelir' || Request::path() == 'gelir/create' ? 'active' : '' }}" href="{{route('gelir.index')}}"><em class="fa fa-thumbs-up"></em> GELİR İŞLEMLERİ</a></li>
                 <li class="nav-item"><a class="nav-link {{ Request::path() == 'gider' || Request::path() == 'gider/create' ? 'active' : '' }}" href="{{route('gider.index')}}"><em class="fa fa-thumbs-down"></em> GİDER İŞLEMLERİ</a></li>
                 <li class="nav-item"><a class="nav-link {{ Request::path() == 'raporlar' ? 'active' : '' }}" href="{{route('raporlar.index')}}"><em class="fa fa-area-chart"></em> RAPORLAR</a></li>
