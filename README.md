@@ -9,14 +9,15 @@
 
 Gelir ve giderlerinizi basitçe girebileceğiniz bir yazılımdır.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- .env Üzerindeki MySQL Ayarlarını Yapınız
+- public klasörü içerisindeki sql dosyasını veritabanına yükleyiniz.
+- Demo hesap bilgileri demo@demo.com - 123456 olarak şekilde ayarlanmıştır.
+- /register dosyası açık bırakıldı yeni bir üyelik açarak silebilirsiniz.
+- MySQL ayarlarını gerçekleştirdikten sonra " php artisan migrate " yaparak tabloları oluşturabilirsiniz.
 
+<p align="center">
+<a href="https://www.burakbesli.com.tr"><img src="https://image.prntscr.com/image/bpQYDmfIQKuxyhB6TH8mWg.png" alt="Burak Beşli"></a>
+</p>
 
 ## Lisans
 
