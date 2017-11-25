@@ -5,7 +5,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## MirzamMuhasebe Gelir - Gider Yazılımı
+## MirzamMuhasebe Gelir - Gider Muhasebe Yazılımı
 
 Gelir ve giderlerinizi basitçe girebileceğiniz bir yazılımdır.
 
