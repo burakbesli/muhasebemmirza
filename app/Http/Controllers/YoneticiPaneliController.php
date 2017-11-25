@@ -36,6 +36,15 @@ class YoneticiPaneliController extends Controller
             $returnGelir[$k] = $v->sum('gelir_tutari');
         }
 
+        $toplamgelir = 0;
+
+        foreach($returnGelir as $k => $v)
+
+        {
+            $toplamgelir = $toplamgelir+$v;
+        }
+
+
         $gider = DB::table('gider')->select('id','gider_tutari','created_at')->where('created_at','>',$dbDate)->orWhere('created_at','=',$dbDate)->orderBy('created_at')->get()->all();
 
 
@@ -50,12 +59,22 @@ class YoneticiPaneliController extends Controller
             $returnGider[$k] = $v->sum('gider_tutari');
         }
 
+        $toplamgider = 0;
+
+        foreach($returnGider as $k => $v)
+
+        {
+            $toplamgider = $toplamgider+$v;
+        }
+
 
 
 
            return view('yoneticipaneli.index' , [
                 'gelirChart' => $returnGelir,
-               'giderChart' => $returnGider
+               'giderChart' => $returnGider,
+               'toplamgider' => $toplamgider,
+               'toplamgelir' => $toplamgelir
            ]);
     }
 

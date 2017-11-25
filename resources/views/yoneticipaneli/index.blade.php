@@ -14,7 +14,48 @@
                     <p class="lead"><a class="btn btn-primary btn-lg mt-2" href="{{route('gelir.create')}}" role="button">GELİR EKLE</a> <a class="btn btn-primary btn-lg mt-2" href="{{route('gider.create')}}" role="button">GİDER EKLE</a></p>
                 </div>
 
+            <div class="row">
+                <div class="col-md-4 col-lg-4">
+                    <div class="card card-inverse card-success">
+                        <div class="card-header">30 Günlük Toplam Gelir</div>
 
+                        <div class="card-block">
+                            <h1 style="text-align:center" class="count">{{$toplamgelir}}</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4">
+                    <div class="card card-inverse card-danger">
+                        <div class="card-header">30 Günlük Toplam Gider </div>
+
+                        <div class="card-block">
+                            <h1 style="text-align:center" class="count">{{$toplamgider}}</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <div class="card card-inverse card-primary">
+                        <div class="card-header">30 Günlük Toplam Gelir - Gider Oranı</div>
+
+                        <div class="card-block">
+                            <h1 style="text-align:center">
+                                @php
+
+                                $toplam = $toplamgelir-$toplamgider;
+                                $action = "<i class='fa fa-long-arrow-up'></i>";
+                                if($toplam < 0) { $action = "<i class='fa fa-long-arrow-down'></i>"; }
+
+
+                                @endphp
+                                <span  class="count">{{$toplam}}</span>
+
+                            {!! $action !!} </h1>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <br />
                 <div class="row">
                 <div class="col-md-6 col-lg-6">
                 <div class="card mb-4">
@@ -68,6 +109,18 @@
     <script src="asset/js/custom.js"></script>
 
     <script>
+
+        $('.count').each(function () {
+            $(this).prop('Counter',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 2000,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
 
           var lineChartData = {
             labels : [@foreach($gelirChart as $k => $v) "{{date('Y-m-d',strtotime($k))}}", @endforeach],
